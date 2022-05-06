@@ -110,9 +110,9 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          path: "docs/V2",
+          path: "versioned_docs/version-v2",
           routeBasePath: "/",
-          sidebarPath: require.resolve("./V2sidebars.js"),
+          sidebarPath: require.resolve("./v2sidebars.js"),
           includeCurrentVersion: false,
           editUrl: "https://github.com/PulsarSwap/pulsar-docs/tree/main/",
         },
@@ -142,7 +142,7 @@ module.exports = {
   //       id: "versionone",
   //       path: "docs/V1",
   //       routeBasePath: "docs/V1",
-  //       sidebarPath: require.resolve("./V1sidebars.js"),
+  //       sidebarPath: require.resolve("./v1sidebars.js"),
   //     },
   //   ],
   // ],
