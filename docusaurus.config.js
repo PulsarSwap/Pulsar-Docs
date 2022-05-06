@@ -1,13 +1,13 @@
 module.exports = {
-  title: "Quickswap",
+  title: "Pulsar",
   tagline: "Documentation and Guides",
-  url: "https://quickswap.github.io/",
+  url: "https://PulsarDocs.github.io/",
   baseUrl: "/",
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "ignore",
   favicon: "img/logo_circle.png",
-  organizationName: "Quickswap", // Usually your GitHub org/user name.
-  projectName: "quickswap-docs", // Usually your repo name.  
+  organizationName: "PulsarSwap", // Usually your GitHub org/user name.
+  projectName: "Pulsar-Docs", // Usually your repo name.
   themeConfig: {
     // hideableSidebar: true,
     prism: {
@@ -22,21 +22,21 @@ module.exports = {
       contextualSearch: true,
       apiKey: "32465e2ab6f7554ff014e64c0d92171c",
       indexName: "v3-docs",
-      appId: 'S0IDD0YGLZ',
+      appId: "S0IDD0YGLZ",
       contextualSearch: true,
     },
     navbar: {
-      title: "Quickswap Documentation",
+      title: "Pulsar Documentation",
       logo: {
-        alt: "Quickswap Dragon",
-        src: "img/quickswaplogo.png",
+        alt: "Pulsar Logo",
+        src: "img/logo_circle.png",
       },
-      items: [                
+      items: [
         {
-          href: "https://github.com/QuickSwap/quickswap-docs",
+          href: "https://github.com/PulsarSwap/Pulsar-Docs",
           label: "GitHub",
           position: "right",
-        },        
+        },
         {
           type: "docsVersionDropdown",
 
@@ -59,29 +59,28 @@ module.exports = {
           items: [
             {
               label: "Home",
-              href: "https://quickswap.exchange/",
+              href: "https://pulsarswap.com/",
             },
             {
               label: "App",
-              href: "https://quickswap.exchange/",
+              href: "https://dapp.pulsarswap.com/",
             },
             {
               label: "Analytics",
-              href: "https://info.quickswap.exchange/home",
+              href: "https://info.pulsarswap.com/",
             },
           ],
         },
         {
           title: "Developers",
           items: [
-            
             {
               label: "GitHub | Protocol",
-              href: "https://github.com/QuickSwap/quickswap-core",
+              href: "https://github.com/PulsarSwap/TWAMM-Contracts",
             },
             {
               label: "GitHub | SDK",
-              href: "https://github.com/QuickSwap/QuickSwap-sdk",
+              href: "https://github.com/PulsarSwap/TWAMM-SDK",
             },
           ],
         },
@@ -90,15 +89,15 @@ module.exports = {
           items: [
             {
               label: "Telegram",
-              href: "https://t.me/QuickSwapDEX",
+              href: "https://t.me/PulsarSwap",
             },
             {
               label: "Twitter",
-              href: "https://twitter.com/QuickswapDEX",
+              href: "https://twitter.com/PulsarSwap",
             },
             {
               label: "Blog",
-              href: "https://quickswap-layer2.medium.com/",
+              href: "https://medium.com/@PulsarSwap/",
             },
           ],
         },
@@ -115,7 +114,7 @@ module.exports = {
           routeBasePath: "/",
           sidebarPath: require.resolve("./V2sidebars.js"),
           includeCurrentVersion: false,
-          editUrl: "https://github.com/QuickSwap/quickswap-docs/tree/main/",
+          editUrl: "https://github.com/PulsarSwap/pulsar-docs/tree/main/",
         },
 
         theme: {

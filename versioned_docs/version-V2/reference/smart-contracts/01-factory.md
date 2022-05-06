@@ -63,7 +63,7 @@ Returns the total number of pairs created through the factory so far.
 function feeTo() external view returns (address);
 ```
 
-See [Protocol Charge Calculation](https://docs.quickswap.exchange/concepts/advanced-topics/01-fees).
+See [Protocol Charge Calculation](https://docs.pulsarswap.com/concepts/advanced-topics/01-fees).
 
 ## feeToSetter
 
