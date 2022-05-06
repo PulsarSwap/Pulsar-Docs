@@ -14,8 +14,6 @@ The Timelock contract can modify system parameters, logic, and contracts in a 't
 
 ![](./images/gov_diagram-1.png)
 
-
-
 # Key Events
 
 ## DelegateChanged
@@ -47,6 +45,7 @@ Emitted when a new proposal is created.
 ```solidity
 VoteCast(address voter, uint proposalId, bool support, uint votes)
 ```
+
 Emitted when a vote has been cast on a proposal.
 
 ## ProposalCanceled
@@ -62,6 +61,7 @@ Emitted when a proposal has been canceled.
 ```solidity
 ProposalQueued(uint id, uint eta)
 ```
+
 Emitted when a proposal has been queued in the Timelock.
 
 ## ProposalExecuted
@@ -72,9 +72,8 @@ ProposalExecuted(uint id)
 
 Emitted when a proposal has been executed in the Timelock.
 
-
 # Read-Only Functions: UNI
- 
+
 ## Get Current Votes
 
 ```solidity
@@ -83,23 +82,24 @@ function getCurrentVotes(address account) returns (uint96)
 
 Returns the balance of votes for an account as of the current block.
 
-| Name           | Type      |                                                                                                                |
-| :------------- | :-------- | :------------------------------------------------------------------------------------------------------------- |
-| account        | `address` | Address of the account of which to retrieve the number of votes.                                               |
+| Name    | Type      |                                                                  |
+| :------ | :-------- | :--------------------------------------------------------------- |
+| account | `address` | Address of the account of which to retrieve the number of votes. |
 
 ## Get Prior Votes
 
 ```solidity
 function getPriorVotes(address account, uint blockNumber) returns (uint96)
 ```
+
 Returns the prior number of votes for an account at a specific block number. The block number passed must be a finalized block or the function will revert.
 
-| Name           | Type      |                                                                                                                |
-| :------------- | :-------- | :------------------------------------------------------------------------------------------------------------- |
-| account        | `address` | Address of the account of which to retrieve the prior number of votes.                                         |
-| blocknumber    | `uint`    | The block number at which to retrieve the prior number of votes.                                               |
-|                |           |                                                                                                                |
-| unnamed        | `uint96`  | The number of prior votes                                                                                      |
+| Name        | Type      |                                                                        |
+| :---------- | :-------- | :--------------------------------------------------------------------- |
+| account     | `address` | Address of the account of which to retrieve the prior number of votes. |
+| blocknumber | `uint`    | The block number at which to retrieve the prior number of votes.       |
+|             |           |                                                                        |
+| unnamed     | `uint96`  | The number of prior votes                                              |
 
 # State-Changing Functions: UNI
 
@@ -108,28 +108,29 @@ Returns the prior number of votes for an account at a specific block number. The
 ```solidity
 function delegate(address delegatee)
 ```
+
 Delegate votes from the sender to the delegatee. Users can delegate to 1 address at a time, and the number of votes added to the delegatee’s vote count is equivalent to the balance of UNI in the user’s account. Votes are delegated from the current block and onward, until the sender delegates again, or transfers their UNI.
 
-| Name           | Type      |                                                                                                                |
-| :------------- | :-------- | :------------------------------------------------------------------------------------------------------------- |
-| delegatee      | `address` | The address to which msg.sender wishes to delegate their votes to.                                             |
-
+| Name      | Type      |                                                                    |
+| :-------- | :-------- | :----------------------------------------------------------------- |
+| delegatee | `address` | The address to which msg.sender wishes to delegate their votes to. |
 
 ## Delegate By Signature
 
 ```solidity
 function delegateBySig(address delegatee, uint nonce, uint expiry, uint8 v, bytes32 r, bytes32 s)
 ```
+
 Delegate votes from the sender to the delegatee. Users can delegate to 1 address at a time, and the number of votes added to the delegatee’s vote count is equivalent to the balance of UNI in the user’s account. Votes are delegated from the current block and onward, until the sender delegates again, or transfers their UNI.
 
-| Name           | Type      |                                                                                                                    |
-| :------------- | :-------- | :----------------------------------------------------------------------------------------------------------------- |
-| delegatee      | `address` | The address to which msg.sender wishis to delegate their vote to                                                   |
-| nonce          | `uint`    | The contract state required to match the signature. This can be retrieved from the contract’s public nonces mapping|
-| expiry         | `uint`    | The time when the signature expires. A block timestamp in seconds since the unix epoch.                            |
-| v              | `uint`    | The recovery byte of the signature.                                                                                |
-| r              | `bytes32` | Half of the ECDSA signature pair.                                                                                  |
-| s              | `bytes32` | Half of the ECDSA signature pair.                                                                                  |
+| Name      | Type      |                                                                                                                     |
+| :-------- | :-------- | :------------------------------------------------------------------------------------------------------------------ |
+| delegatee | `address` | The address to which msg.sender wishis to delegate their vote to                                                    |
+| nonce     | `uint`    | The contract state required to match the signature. This can be retrieved from the contract’s public nonces mapping |
+| expiry    | `uint`    | The time when the signature expires. A block timestamp in seconds since the unix epoch.                             |
+| v         | `uint`    | The recovery byte of the signature.                                                                                 |
+| r         | `bytes32` | Half of the ECDSA signature pair.                                                                                   |
+| s         | `bytes32` | Half of the ECDSA signature pair.                                                                                   |
 
 # Read-Only Functions: Governor Alpha
 
@@ -165,7 +166,6 @@ function votingDelay() returns (uint)
 
 Returns the number of blocks to wait before voting on a proposal may begin. This value is added to the current block number when a proposal is created.
 
-
 ## Voting Period
 
 ```solidity
@@ -182,11 +182,12 @@ function getActions(uint proposalId) returns (uint proposalId) public view retur
 
 Gets the actions of a selected proposal. Pass a proposal ID and get the targets, values, signatures and calldatas of that proposal.
 
-| Name           | Type      |                                                                                                                    |
-| :------------- | :-------- | :----------------------------------------------------------------------------------------------------------------- |
-| proposalId     | `uint`    | ID of the proposal                                                                                                 |
+| Name       | Type   |                    |
+| :--------- | :----- | :----------------- |
+| proposalId | `uint` | ID of the proposal |
 
 Returns:
+
 - Array of addresses of contracts the proposal calls.
 - Array of unsigned integers the proposal uses as values.
 - Array of strings of the proposal’s signatures.
@@ -200,12 +201,12 @@ function getReceipt(uint proposalId, address voter) returns (Receipt memory)
 
 Returns a proposal ballot receipt of a given voter.
 
-| Name           | Type      |                                                                                                                    |
-| :------------- | :-------- | :----------------------------------------------------------------------------------------------------------------- |
-| proposalId     | `uint`    | ID of the proposal in which to get a voter’s ballot receipt.                                                       |
-| voter          | `address` | Address of the account of a proposal voter.                                                                        |
-|                |           |                                                                                                                    |
-| Receipt        | `struct`  | A Receipt struct for the ballot of the voter address.                                                              |
+| Name       | Type      |                                                              |
+| :--------- | :-------- | :----------------------------------------------------------- |
+| proposalId | `uint`    | ID of the proposal in which to get a voter’s ballot receipt. |
+| voter      | `address` | Address of the account of a proposal voter.                  |
+|            |           |                                                              |
+| Receipt    | `struct`  | A Receipt struct for the ballot of the voter address.        |
 
 ## State
 
@@ -214,18 +215,18 @@ function state(uint proposalId) returns (ProposalState)
 ```
 
 Returns enum of type ProposalState, possible types are:
--Pending 
--Active 
+-Pending
+-Active
 -Canceled
--Defeated 
--Succeeded 
+-Defeated
+-Succeeded
 -Queued
--Expired 
+-Expired
 -andExecuted
 
-| Name           | Type      |                                                                                                                    |
-| :------------- | :-------- | :----------------------------------------------------------------------------------------------------------------- |
-| proposalId     | `uint`    | ID of the proposal                                                                                                 |
+| Name       | Type   |                    |
+| :--------- | :----- | :----------------- |
+| proposalId | `uint` | ID of the proposal |
 
 # State-Changing Functions: Governor Alpha
 
@@ -243,17 +244,15 @@ The sender must hold more UNI than the current proposal threshold (proposalThres
 
 The proposer cannot create another proposal if they currently have a pending or active proposal. It is not possible to queue two identical actions in the same block (due to a restriction in the Timelock), therefore actions in a single proposal must be unique, and unique proposals that share an identical action must be queued in different blocks.
 
-| Name           | Type      |                                                                                                                                                                                        |
-| :------------- | :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| targets        | `address` | The ordered list of target addresses for calls to be made during proposal execution. This array must be the same length as all other array parameters in this function.                |
-| values         | `uint`    | The ordered list of values (i.e. msg.value) to be passed to the calls made during proposal execution. This array must be the same length as all other array parameters in this function|
-| signatures     | `string`  | The ordered list of function signatures to be passed during execution. This array must be the same length as all other array parameters in this function.                              |
-| calldatas      | `bytes`   | The ordered list of data to be passed to each individual function call during proposal execution. This array must be the same length as all other array parameters in this function.   |
-| description    | `string`  | A human readable description of the proposal and the changes it will enact.                                                                                                            |
-|                |           |                                                                                                                                                                                        |
-| Unnamed        | `uint`    | Returns ID of the new proposal                                                                                                                                                         |
-
-
+| Name        | Type      |                                                                                                                                                                                         |
+| :---------- | :-------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| targets     | `address` | The ordered list of target addresses for calls to be made during proposal execution. This array must be the same length as all other array parameters in this function.                 |
+| values      | `uint`    | The ordered list of values (i.e. msg.value) to be passed to the calls made during proposal execution. This array must be the same length as all other array parameters in this function |
+| signatures  | `string`  | The ordered list of function signatures to be passed during execution. This array must be the same length as all other array parameters in this function.                               |
+| calldatas   | `bytes`   | The ordered list of data to be passed to each individual function call during proposal execution. This array must be the same length as all other array parameters in this function.    |
+| description | `string`  | A human readable description of the proposal and the changes it will enact.                                                                                                             |
+|             |           |                                                                                                                                                                                         |
+| Unnamed     | `uint`    | Returns ID of the new proposal                                                                                                                                                          |
 
 ## Queue
 
@@ -263,11 +262,9 @@ function queue(uint proposalId)
 
 After a proposal has succeeded, any address can call the queue method to move the proposal into the Timelock queue. A proposal can only be queued if it has succeeded.
 
-| Name           | Type      |                                                                                                                    |
-| :------------- | :-------- | :----------------------------------------------------------------------------------------------------------------- |
-| proposalId     | `uint`    | ID of a given successful proposal                                                                                  |
-
-
+| Name       | Type   |                                   |
+| :--------- | :----- | :-------------------------------- |
+| proposalId | `uint` | ID of a given successful proposal |
 
 ## Execute
 
@@ -278,21 +275,21 @@ function execute(uint proposalId) payable
 After the Timelock delay period, any account may invoke the execute method to apply the changes from the proposal to the target contracts. This will invoke each of the actions described in the proposal.
 This function is payable so the Timelock contract can invoke payable functions that were selected in the proposal.
 
-| Name           | Type      |                                                                                                                    |
-| :------------- | :-------- | :----------------------------------------------------------------------------------------------------------------- |
-| proposalId     | `uint`    | ID of a given successful proposal                                                                                  |
+| Name       | Type   |                                   |
+| :--------- | :----- | :-------------------------------- |
+| proposalId | `uint` | ID of a given successful proposal |
 
-
-## Cancel 
+## Cancel
 
 ```solidity
 function queue(uint proposalId)
 ```
+
 Cancel a proposal that has not yet been executed. The Guardian is the only one who may execute this unless the proposer does not maintain the delegates required to create a proposal. If the proposer does not have more delegates than the proposal threshold, anyone can cancel the proposal.
 
-| Name           | Type      |                                                                                                                    |
-| :------------- | :-------- | :----------------------------------------------------------------------------------------------------------------- |
-| proposalId     | `uint`    | ID of a proposal to cancel                                                                                         |
+| Name       | Type   |                            |
+| :--------- | :----- | :------------------------- |
+| proposalId | `uint` | ID of a proposal to cancel |
 
 ## Cast Vote
 
@@ -302,11 +299,10 @@ function castVote(uint proposalId, bool support)
 
 Cast a vote on a proposal. The account's voting weight is determined by it's number of delegated votes at the time the proposal becomes active.
 
-| Name           | Type      |                                                                                                                    |
-| :------------- | :-------- | :----------------------------------------------------------------------------------------------------------------- |
-| proposalId     | `uint`    | ID of a given successful proposal                                                                                  |
-| support        | `bool`    | A boolean of true for 'yes' or false for 'no' on the proposal vote.                                                |
-
+| Name       | Type   |                                                                     |
+| :--------- | :----- | :------------------------------------------------------------------ |
+| proposalId | `uint` | ID of a given successful proposal                                   |
+| support    | `bool` | A boolean of true for 'yes' or false for 'no' on the proposal vote. |
 
 ## Cast Vote By Signature
 
@@ -316,12 +312,11 @@ function castVoteBySig(uint proposalId, bool support, uint8 v, bytes32 r, bytes3
 
 Cast a vote on a proposal. The account's voting weight is determined its number of delegated votes at the time the proposal became active. This method has the same purpose as Cast Vote, but instead enables offline signatures to participate in governance voting. For more details on how to create an offline signature, review EIP-712.
 
-
-| Name           | Type      |                                                                                                                    |
-| :------------- | :-------- | :----------------------------------------------------------------------------------------------------------------- |
-| proposalId     | `uint`    | ID of a given successful proposal                                                                                  |
-| support        | `bool`    | A boolean of true for 'yes' or false for 'no' on the proposal vote.                                                |
-| expiry         | `uint`    | The time when the signature expires. A block timestamp in seconds since the unix epoch.                            |
-| v              | `uint`    | The recovery byte of the signature.                                                                                |
-| r              | `bytes32` | Half of the ECDSA signature pair.                                                                                  |
-| s              | `bytes32` | Half of the ECDSA signature pair.                                                                                  |
+| Name       | Type      |                                                                                         |
+| :--------- | :-------- | :-------------------------------------------------------------------------------------- |
+| proposalId | `uint`    | ID of a given successful proposal                                                       |
+| support    | `bool`    | A boolean of true for 'yes' or false for 'no' on the proposal vote.                     |
+| expiry     | `uint`    | The time when the signature expires. A block timestamp in seconds since the unix epoch. |
+| v          | `uint`    | The recovery byte of the signature.                                                     |
+| r          | `bytes32` | Half of the ECDSA signature pair.                                                       |
+| s          | `bytes32` | Half of the ECDSA signature pair.                                                       |

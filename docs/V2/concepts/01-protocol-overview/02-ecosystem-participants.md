@@ -2,7 +2,7 @@
 id: 02-ecosystem-participants
 title: Ecosystem Participants
 tags: protocol-overview, documentation
-related: '/docs/v2/core-concepts/pools'
+related: "/docs/v2/core-concepts/pools"
 ---
 
 ![](./images/participants.jpg)

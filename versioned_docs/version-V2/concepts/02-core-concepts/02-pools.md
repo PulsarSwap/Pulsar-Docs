@@ -25,8 +25,9 @@ To retrieve the underlying liquidity, plus any fees accrued, liquidity providers
 As liquidity tokens are themselves tradable assets, liquidity providers may sell, transfer, or otherwise use their liquidity tokens in any way they see fit.
 
 > Learn more with advanced topics:
- * [Understanding Returns](../../concepts/03-advanced-topics/03-understanding-returns.md) 
- * [Fees](../../concepts/03-advanced-topics/01-fees.md)
+
+- [Understanding Returns](../../concepts/03-advanced-topics/03-understanding-returns.md)
+- [Fees](../../concepts/03-advanced-topics/01-fees.md)
 
 # Why pools?
 

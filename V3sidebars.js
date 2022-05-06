@@ -6,9 +6,9 @@ module.exports = {
       label: "Guides",
       collapsed: false,
       items: [
-        "SDK-guides/quick-start", 
+        "SDK-guides/quick-start",
         "SDK-guides/using-ethers",
-        "SDK-guides/creating-a-pool"
+        "SDK-guides/creating-a-pool",
       ],
     },
     {

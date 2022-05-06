@@ -14,11 +14,11 @@ The most obvious way to get the address for a pair is to call [getPair](../../re
 
 Thanks to some [fancy footwork in the factory](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol#L32), we can also compute pair addresses _without any on-chain lookups_ because of [CREATE2](https://eips.ethereum.org/EIPS/eip-1014). The following values are required for this technique:
 
-|                        |                                                                                 |
-| :--------------------- | :------------------------------------------------------------------------------ |
-| `address`              | The [factory address](/smart-contracts/factory/#address) |
-| `salt`                 | `keccak256(abi.encodePacked(token0, token1))`                                   |
-| `keccak256(init_code)` | `0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f`            |
+|                        |                                                                      |
+| :--------------------- | :------------------------------------------------------------------- |
+| `address`              | The [factory address](/smart-contracts/factory/#address)             |
+| `salt`                 | `keccak256(abi.encodePacked(token0, token1))`                        |
+| `keccak256(init_code)` | `0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f` |
 
 - `token0` must be strictly less than `token1` by sort order.
 

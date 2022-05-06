@@ -25,7 +25,6 @@ To prevent these types of attacks, it's vital to submit swaps _that have access 
 
 There are, of course, other options for oracles, including [native V2 oracles](../02-core-concepts/04-oracles.md).
 
-
 ## Exact Input
 
 If you'd like to send an exact amount of input tokens in exchange for as many output tokens as possible, you'll want to use [getAmountsOut](../../reference/smart-contracts/06-router02.md#getamountout). The equivalent SDK function is [getOutputAmount](../../reference/SDK/03-pair.md#getoutputamount), or [minimumAmountOut](../../reference/SDK/05-trade.md#minimumamountout-since-204) for slippage calculations.

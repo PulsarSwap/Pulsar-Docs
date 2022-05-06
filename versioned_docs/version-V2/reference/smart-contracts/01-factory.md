@@ -3,6 +3,7 @@ id: 01-factory
 title: Factory
 tags: smart-contracts, documentation
 ---
+
 # Factory
 
 ## Code
@@ -112,7 +113,7 @@ interface IUniswapV2Factory {
 # ABI
 
 ```typescript
-import IUniswapV2Factory from '@uniswap/v2-core/build/IUniswapV2Factory.json'
+import IUniswapV2Factory from "@uniswap/v2-core/build/IUniswapV2Factory.json";
 ```
 
 [https://unpkg.com/@uniswap/v2-core@1.0.0/build/IUniswapV2Factory.json](https://unpkg.com/@uniswap/v2-core@1.0.0/build/IUniswapV2Factory.json)
