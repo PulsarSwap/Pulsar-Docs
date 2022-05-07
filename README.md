@@ -29,7 +29,7 @@ Edit config.json file with
 
 - start url from updated website
 - sitemap url from updated website: ex) for docs: https://docs.pulsarswap.com/sitemap.xml
-- "v3-docs" index name
+- "v1-docs" index name
 - install jq : `brew install jq`
   run `docker run -it --env-file=.env -e "CONFIG=$(cat ./config.json | jq -r tostring)" algolia/docsearch-scraper`
 

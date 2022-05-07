@@ -21,7 +21,7 @@ module.exports = {
     algolia: {
       contextualSearch: true,
       apiKey: "32465e2ab6f7554ff014e64c0d92171c",
-      indexName: "v3-docs",
+      indexName: "v1-docs",
       appId: "S0IDD0YGLZ",
       contextualSearch: true,
     },
@@ -40,11 +40,10 @@ module.exports = {
         {
           type: "docsVersionDropdown",
 
-          //// Optional
           position: "right",
           // Add additional dropdown items at the beginning/end of the dropdown.
           // dropdownItemsBefore: [],
-          // dropdownItemsAfter: [{to: '/versions', label: 'V1'}],
+          // dropdownItemsAfter: [{to: '/versions', label: 'v1'}],
           // Do not add the link active class when browsing docs.
           // dropdownActiveClassDisabled: false,
           docsPluginId: "default",
@@ -62,7 +61,7 @@ module.exports = {
               href: "https://pulsarswap.com/",
             },
             {
-              label: "App",
+              label: "Dapp",
               href: "https://dapp.pulsarswap.com/",
             },
             {
@@ -110,9 +109,9 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          path: "versioned_docs/version-v2",
+          path: "versioned_docs/version-v1",
           routeBasePath: "/",
-          sidebarPath: require.resolve("./v2sidebars.js"),
+          sidebarPath: require.resolve("./v1sidebars.js"),
           includeCurrentVersion: false,
           editUrl: "https://github.com/PulsarSwap/pulsar-docs/tree/main/",
         },
@@ -135,15 +134,4 @@ module.exports = {
     //   },
     // ],
   ],
-  //   ],
-  //   [
-  //     "@docusaurus/plugin-content-docs",
-  //     {
-  //       id: "versionone",
-  //       path: "docs/V1",
-  //       routeBasePath: "docs/V1",
-  //       sidebarPath: require.resolve("./v1sidebars.js"),
-  //     },
-  //   ],
-  // ],
 };
