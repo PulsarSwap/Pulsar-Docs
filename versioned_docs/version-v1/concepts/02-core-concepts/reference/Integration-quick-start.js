@@ -5,7 +5,7 @@ export default function Redirector({ path }) {
   return (
     <Redirect
       from={path}
-      to={`/docs/v1/smart-contract-integration/quick-start`}
+      to={`/versioned_docs/version-v1/smart-contract-integration/quick-start`}
       noThrow
     />
   );

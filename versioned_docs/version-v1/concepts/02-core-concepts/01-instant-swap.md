@@ -1,13 +1,27 @@
 ---
-id: 01-swaps
-title: Swaps
-subtitle: Learn about the core functionality of the Pulsar protocol. Token Swaps.
-tags: swaps, documentation
+id: instant-swap
+title: Instant Swap
+tags: instant swap, documentation
 ---
+
+Pulsar TWAMM's embedded AMM provides instant swap of tokens, which follows the constant product formula `x*y=k`
+ , where a swap does not change the product of a pair of reserve balances, `k` often referred to as invariants.
+
+TWAMM's [Instant Swap](01-instant-swap.md) is exactly the same as Uniswap's token swap, but due to TWAMM's specificity, the status of the [Term Swap](02-term-swap.md) is updated each time the instant swap is performed, which is used to calculate the [term swap rewards](02-term-swap.md) for [LongTermOrders](04-long-term-orders.md)
+.
+
+----------------------------------------------------------------
 
 ![](./images/trade.jpg)
 
 # Introduction
+
+Pulsar TWAMM's embedded AMM provides instant swap of tokens, which follows the constant product formula ​
+, where a swap does not change the product of a pair of reserve balances, ​
+often referred to as invariants.
+TWAMM's instant swap is exactly the same as Uniswap's token swap, but due to TWAMM's specificity, the status of the ​
+is updated each time the instant swap is performed, which is used to calculate the for ​
+.
 
 Token swaps in Pulsar are a simple way to trade one ERC-20 token for another.
 

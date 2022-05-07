@@ -1,7 +1,7 @@
 ---
-id: 02-pools
-title: Pools
-tags: pools, documentation
+id: liquidity-pool
+title: Liquidity Pool
+tags: liquidity pool, documentation
 ---
 
 ![](./images/anatomy.jpg)

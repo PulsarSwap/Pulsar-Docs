@@ -1,7 +1,7 @@
 ---
-id: 04-glossary
+id: glossary
 title: Glossary
-tags: protocol-overview, documentation
+tags: glossary, documentation
 ---
 
 ### Automated market maker

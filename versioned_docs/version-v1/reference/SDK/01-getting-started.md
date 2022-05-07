@@ -35,7 +35,7 @@ The [source code is available on GitHub](https://github.com/Uniswap/uniswap-sdk)
 The SDK declares its dependencies as [peer dependencies](https://github.com/Uniswap/uniswap-sdk/blob/v2/package.json#L33).
 This is for two reasons:
 
-- prevent installation of unused dependencies (e.g. `@ethersproject/providers` and `@ethersproject/contracts`, only used in [`Fetcher`](/docs/v1/SDK/fetcher))
+- prevent installation of unused dependencies (e.g. `@ethersproject/providers` and `@ethersproject/contracts`, only used in [`Fetcher`](/versioned_docs/version-v1/SDK/fetcher))
 - prevent duplicate `@ethersproject` dependencies with conflicting versions
 
 However, this means you must install these dependencies alongside the SDK, if you do not already have them installed.

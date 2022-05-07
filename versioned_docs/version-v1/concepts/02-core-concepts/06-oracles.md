@@ -1,10 +1,8 @@
 ---
-id: 04-oracles
+id: oracles
 title: Oracles
 tags: oracles, documentation
 ---
-
-# Introduction
 
 A price oracle is any tool used to view price information about a given asset. When you look at stock prices on your phone, you are using your phone as a price oracle. Similarly, the app on your phone relies on devices to retrieve price information - likely several, which are aggregated and then displayed to you, the end-user. These are price oracles as well.
 
@@ -25,13 +23,13 @@ Unfortunately, this alone is not enough. If significant value settles based on t
 
 Instead, Pulsar V2 adds this end-of-block price to a single cumulative-price variable in the core contract weighted by the amount of time this price existed. **This variable represents a sum of the Pulsar price for every second in the entire history of the contract.**
 
-![](./images/v2_onchain_price_data.png)
+![](./images/v1_onchain_price_data.png)
 
 This variable can be used by external contracts to track accurate time-weighted average prices (TWAPs) across any time interval.
 
 The TWAP is constructed by reading the cumulative price from an ERC20 token pair at the beginning and at the end of the desired interval. The difference in this cumulative price can then be divided by the length of the interval to create a TWAP for that period.
 
-![](./images/v2_twap.png)
+![](./images/v1_twap.png)
 
 TWAPs can be used directly or as the basis for moving averages (EMAs and SMAs) as needed.
 

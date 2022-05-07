@@ -1,7 +1,7 @@
 module.exports = {
-  title: "Pulsar",
+  title: "Pulsar TWAMM Protocol",
   tagline: "Documentation and Guides",
-  url: "https://PulsarDocs.github.io/",
+  url: "https://docs.pulsarswap.com/",
   baseUrl: "/",
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "ignore",
@@ -28,7 +28,7 @@ module.exports = {
     navbar: {
       title: "Pulsar Documentation",
       logo: {
-        alt: "Pulsar Logo",
+        alt: "pulsar logo",
         src: "img/logo_circle.png",
       },
       items: [
@@ -38,16 +38,20 @@ module.exports = {
           position: "right",
         },
         {
-          type: "docsVersionDropdown",
-
+          label: "Whitepaper",
+          to: "https://www.paradigm.xyz/2021/07/twamm",
           position: "right",
-          // Add additional dropdown items at the beginning/end of the dropdown.
-          // dropdownItemsBefore: [],
-          // dropdownItemsAfter: [{to: '/versions', label: 'v1'}],
-          // Do not add the link active class when browsing docs.
-          // dropdownActiveClassDisabled: false,
-          docsPluginId: "default",
         },
+        // {
+        //   type: "docsVersionDropdown",
+        //   position: "right",
+        //   // Add additional dropdown items at the beginning/end of the dropdown.
+        //   // dropdownItemsBefore: [],
+        //   // dropdownItemsAfter: [{to: '/versions', label: 'v1'}],
+        //   // Do not add the link active class when browsing docs.
+        //   // dropdownActiveClassDisabled: false,
+        //   docsPluginId: "default",
+        // },
       ],
     },
     footer: {

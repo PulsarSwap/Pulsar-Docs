@@ -1,11 +1,11 @@
 ---
-id: 02-ecosystem-participants
+id: ecosystem-participants
 title: Ecosystem Participants
-tags: protocol-overview, documentation
-related: "/docs/v1/core-concepts/pools"
+tags: ecosystem participants, documentation
+related: "/versioned_docs/version-v1/core-concepts/liquidity-pool"
 ---
 
-![](./images/Ecosystem-Participants.png)
+![](./images/ecosystem-participants.png)
 
 The Pulsar ecosystem is primarily comprised of three types of users: liquidity providers, traders, and developers. Liquidity providers are incentivized to contribute [ERC-20](https://eips.ethereum.org/EIPS/eip-20) tokens to common liquidity pools. Traders can swap these tokens for one another for a fixed [0.30% fee](../03-advanced-topics/01-fees.md) (which goes to liquidity providers). Developers can integrate directly with Pulsar smart contracts to power new and exciting interactions with tokens, trading interfaces, retail experiences, and more.
 
