@@ -1,7 +1,7 @@
 ---
 id: pulsar-twamm-protocol
 title: Pulsar TWAMM Protocol
-tags: pulsar-twamm-protocol, documentation
+tags: pulsar twamm protocol, documentation
 slug: /
 ---
 
