@@ -4,6 +4,24 @@ title: Liquidity Pool
 tags: liquidity pool, documentation
 ---
 
+The TWAMM smart contract manages all liquidity pools consisting of two ERC-20 token reserves, the contract holds the balance of both tokens and performs provide and remove of tokens.
+
+Anyone can become a liquidity provider (LP) of the liquidity pool by providing the equivalent value of each underlying token in exchange for the pool's liquidity tokens (LP Token). These tokens track a pro-rata share of LPs in the total reserve and can be redeemed at any time for the underlying assets.
+
+Again, due to the specific of TWAMM, the status of the term swap is updated each time a base token is provided or removed from the liquidity pool, which is used to calculate the swap rewards for longterm orders.
+
+## LP Token
+
+Whenever a base token is provided into the liquidity pool, liquidity tokens (LP Token) are minted and sent to the provider's address. These tokens represent the liquidity provider's contribution to the liquidity pool, and the percentage of funds provided determines the number of liquidity tokens received by the provider. If the provider is creating a new pool, the number of liquidity tokens they will receive will be equal to $\sqrt{x\cdot y} =k$, where $x$ and $y$ represent the amount of each token provided.
+
+Whenever a swap occurs, a fee of 0.3% is charged to the sender of the transaction, which is distributed proportionally to all LPs in the pool after the transaction is completed.
+
+When removing base tokens from the liquidity pool, liquidity providers must first "burn" their liquidity tokens and then redeem the underlying assets in accordance with the share of the LP Token.
+
+Because liquidity tokens are inherently tradable assets, liquidity providers may sell, transfer or otherwise use their liquidity tokens in any way they see fit.
+
+---
+
 ![](./images/anatomy.jpg)
 
 # Introduction

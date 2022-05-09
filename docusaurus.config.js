@@ -1,3 +1,6 @@
+const math = require("remark-math");
+const katex = require("rehype-katex");
+
 module.exports = {
   title: "Pulsar TWAMM Protocol",
   tagline: "Documentation and Guides",
@@ -115,6 +118,8 @@ module.exports = {
         docs: {
           path: "versioned_docs/version-v1",
           routeBasePath: "/",
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
           sidebarPath: require.resolve("./v1sidebars.js"),
           includeCurrentVersion: false,
           editUrl: "https://github.com/PulsarSwap/pulsar-docs/tree/main/",
@@ -126,6 +131,15 @@ module.exports = {
         },
       },
     ],
+  ],
+  stylesheets: [
+    {
+      href: "https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css",
+      type: "text/css",
+      integrity:
+        "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
+      crossorigin: "anonymous",
+    },
   ],
   plugins: [
     // [

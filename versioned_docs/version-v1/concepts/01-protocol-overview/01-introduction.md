@@ -12,7 +12,7 @@ Unlike traditional AMM models that are costly for large transactions, TWAMM spli
 
 Pulsar TWAMM contains an embedded AMM that implements most of the standard AMM functionality (liquidity provide, liquidity remove and swap). Also, the execution logic for longterm orders is split into two libraries, [`OrderPool.sol`](https://github.com/PulsarSwap/TWAMM-Contracts/blob/main/contracts/libraries/OrderPool.sol) and[`LongTermOrders.sol`](https://github.com/PulsarSwap/TWAMM-Contracts/blob/main/contracts/libraries/LongTermOrders.sol), with each TWAMM instance facilitating [Term Swap](../02-core-concepts/02-term-swap.md) between two specific asset pairs, such as ETH and USDC.
 
-----------------------------------------------------------------
+---
 
 ![](./images/how-pulsar-works.png)
 
@@ -40,4 +40,3 @@ Because the relative price of the two pair assets can only be changed through tr
 To see how token swaps work in practice, and to walk through the lifecycle of a swap, check out [Swaps](../02-core-concepts/01-swaps.md). Or, to see how liquidity pools work, see [Pools](../02-core-concepts/02-pools.md).
 
 Ultimately, of course, the Pulsar protocol is just smart contract code running on Ethereum. To understand how they work, head over to [Smart Contracts](../../reference/smart-contracts/01-factory.md)
-

@@ -14,7 +14,7 @@ Paradigm Research Partners [Dave White](https://twitter.com/_Dave__White_), [Dan
 
 The detailed design principles of the TWAMM can be found at the Paradigm official website: <https://www.paradigm.xyz/2021/07/twamm/>, and the mathematical principles involved in TWAMM swap can be found in this article: <https://hackmd.io/@luffy/SJxSsOH1Y>.
 
-Pulsar-TWAMM is the first implementation of TWAMM that effectively combines embedded AMM, [LongTerm Orders](concepts/02-core-concepts/04-long-term-orders.md), [Order Pool](concepts/02-core-concepts/05-order-pool.md) and [scalable reward distribution](https://uploads-ssl.webflow.com/5ad71ffeb79acc67c8bcdaba/5ad8d1193a40977462982470_scalable-reward-distribution-paper.pdf) to enable not only [Instant Swap](concepts/02-core-concepts/01-instant-swap.md) like Uniawap, but also TWAMM [Term Swap](concepts/02-core-concepts/02-term-swap.md) like algorithmic trading [TWAP](https://en.wikipedia.org/wiki/Time-weighted_average_price). Compared to AMM, TWAMM reduces the price slippage associated with large trades, thus reducing trader losses.
+Pulsar-TWAMM is the first implementation of TWAMM that effectively combines embedded AMM, [LongTerm Orders](concepts/02-core-concepts/04-long-term-orders.md), [Order Pool](concepts/02-core-concepts/05-order-pool.md) and [Scalable Reward Distribution](https://uploads-ssl.webflow.com/5ad71ffeb79acc67c8bcdaba/5ad8d1193a40977462982470_scalable-reward-distribution-paper.pdf) to enable not only [Instant Swap](concepts/02-core-concepts/01-instant-swap.md) like Uniawap, but also TWAMM [Term Swap](concepts/02-core-concepts/02-term-swap.md) like algorithmic trading [TWAP](https://en.wikipedia.org/wiki/Time-weighted_average_price). Compared to AMM, TWAMM reduces the price slippage associated with large trades, thus reducing trader losses.
 
 ## Developer Links
 
@@ -27,6 +27,7 @@ The TWAMM SDK, which can assist developers when interacting with the Pulsar prot
 - [`TWAMM-SDK`](https://github.com/PulsarSwap/TWAMM-SDK)
 
 Inspired by:
+
 - <https://www.paradigm.xyz/2021/07/twamm>
 - <https://github.com/para-dave/twamm>
-- [FrankieIsLost MVP code implementation](<https://github.com/FrankieIsLost>)
+- [FrankieIsLost MVP code implementation](https://github.com/FrankieIsLost)
