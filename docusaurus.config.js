@@ -2,7 +2,7 @@ const math = require("remark-math");
 const katex = require("rehype-katex");
 
 module.exports = {
-  title: "Pulsar TWAMM Protocol",
+  title: "Pulsar Protocol",
   tagline: "Documentation and Guides",
   url: "https://docs.pulsarswap.com/",
   baseUrl: "/",
@@ -36,7 +36,7 @@ module.exports = {
       },
       items: [
         {
-          href: "https://github.com/PulsarSwap/Pulsar-Docs",
+          href: "https://github.com/PulsarSwap",
           label: "GitHub",
           position: "right",
         },
@@ -85,8 +85,8 @@ module.exports = {
               href: "https://github.com/PulsarSwap/TWAMM-Contracts",
             },
             {
-              label: "GitHub | SDK",
-              href: "https://github.com/PulsarSwap/TWAMM-SDK",
+              label: "GitHub | Docs",
+              href: "https://github.com/PulsarSwap/Pulsar-Docs",
             },
           ],
         },
@@ -103,7 +103,7 @@ module.exports = {
             },
             {
               label: "Blog",
-              href: "https://medium.com/@PulsarSwap/",
+              href: "https://mirror.xyz/pulsarswap.eth/",
             },
           ],
         },
