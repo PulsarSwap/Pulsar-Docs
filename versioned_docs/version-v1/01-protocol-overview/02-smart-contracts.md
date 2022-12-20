@@ -14,7 +14,7 @@ The core consists of a singleton [factory](#factory) and many [pairs](#pairs), w
 
 Pulsar is a DeFi protocol that uses smart contracts to facilitate swap tokens and interactions on the blockchain. Pulsar protocol has three main smart contracts: [Factory](#factory), [Pair](#pair), and [TWAMM](#twamm) contract.
 
-The Factory contract allows for the creation of liquidity pools, while the Pair contract manages the underlying assets (two ERC20 tokens) and their corresponding liquidity tokens. The TWAMM contract, also known as the "Time-Weighted Average Market Maker," is responsible for handling instant swap, term swap and facilitating liquidity provision and removing.
+The Factory contract allows for the creation of liquidity pools, while the Pair contract manages the underlying assets (two ERC20 tokens) and their corresponding liquidity tokens. The TWAMM contract, also known as the `Time-Weighted Average Market Maker` is responsible for handling instant swap, term swap and facilitating liquidity provision and removing.
 
 Together, these contracts enable the Pulsar Protocol to provide decentralized, automated finance for a range of assets on the Ethereum blockchain.
 
@@ -36,7 +36,7 @@ The factory holds the generic bytecode responsible for powering pairs. Its prima
 
 [`Pair.sol`](https://github.com/PulsarSwap/TWAMM-Contracts/blob/master/contracts/Pair.sol)
 
-The `Pair`, which uses the [BinarySearchTree](#binarysearchtree), [LongTermOrders](#longtermorders), [OrderPool](#orderpool) have two primary purposes: serving as time weighted average market makers of two ERC20 tokens and keeping track of pool token balances. They also expose data which can be used to execute [Long-Term Orders](../02-core-concepts/04-long-term-orders.md).
+The `Pair`, which uses the [BinarySearchTree](#binarysearchtree), [LongTermOrders](#longtermorders), [OrderPool](#orderpool) have two primary purposes: serving as time weighted average market makers of two ERC20 tokens and keeping track of pool token balances. They also expose data which can be used to execute [LongTerm Orders](../02-core-concepts/04-long-term-orders.md).
 
 # TWAMM
 
@@ -60,15 +60,15 @@ The `Library` provides a variety of convenience functions for fetching data.
 
 [`OrderPool.sol`](https://github.com/PulsarSwap/TWAMM-Contracts/blob/master/contracts/libraries/OrderPool.sol)
 
-The main abstraction for implementing long-term orders is the `OrderPool`. The order pool represents a set of long term orders, which sell a given token to the embedded AMM at a constant rate. The token pool also handles the logic for the distribution of sales proceeds to the owners of the long term orders.
+The main abstraction for implementing long-term orders is the `OrderPool`. The order pool represents a set of long-term orders, which sell a given token to the embedded AMM at a constant rate. The token pool also handles the logic for the distribution of sales proceeds to the owners of the long-term orders.
 
-The distribution of rewards is done through a modified version of algorithm from [Scalable Reward Distribution](https://uploads-ssl.webflow.com/5ad71ffeb79acc67c8bcdaba/5ad8d1193a40977462982470_scalable-reward-distribution-paper.pdf) on the Ethereum Blockchain. Since order expiries are decoupled from reward distribution in the TWAMM model, the modified algorithm needs to keep track of additional parameters to compute rewards correctly.
+The distribution of proceeds is done through a modified version of algorithm from [Scalable Reward Distribution](https://uploads-ssl.webflow.com/5ad71ffeb79acc67c8bcdaba/5ad8d1193a40977462982470_scalable-reward-distribution-paper.pdf) on the Ethereum Blockchain. Since order expiries are decoupled from proceeds distribution in the TWAMM model, the modified algorithm needs to keep track of additional parameters to compute proceeds correctly.
 
 ## LongTermOrders
 
 [`LongTermOrders.sol`](https://github.com/PulsarSwap/TWAMM-Contracts/blob/master/contracts/libraries/LongTermOrders.sol)
 
-In addition to the [OrderPool](#orderpool), the `LongTermOrders` struck keep the state of the virtual order execution. Most importantly, it keep track of the last block where virtual orders were executed. Before every interaction with the embedded AMM, the state of virtual order execution is brought forward to the present block. We can do this efficiently because only certain blocks are eligible for virtual order expiry. Thus, we can advance the state by a full block interval in a single computation. Crucially, advancing the state of long term order execution is linear only in the number of block intervals since the last interaction with TWAMM, not linear in the number of orders.
+In addition to the [OrderPool](#orderpool), the `LongTermOrders` struck keep the state of the virtual order execution. Most importantly, it keep track of the last block where virtual orders were executed. Before every interaction with the embedded AMM, the state of virtual order execution is brought forward to the present block. We can do this efficiently because only certain blocks are eligible for virtual order expiry. Thus, we can advance the state by a full block interval in a single computation. Crucially, advancing the state of long-term order execution is linear only in the number of block intervals since the last interaction with TWAMM, not linear in the number of orders.
 
 ## BinarySearchTree
 
@@ -86,4 +86,4 @@ Typically, smart contracts which need tokens to perform some functionality requi
 
 ## Fixed Point Math
 
-This implementation uses the [PRBMath Library](https://github.com/paulrberg/prb-math) for fixed point arithmetic, in order to implement the closed form solution to settling long term trades. Efforts were made to make the computation numerically stable, but there's remaining work to be done here in order to ensure that the computation is correct for the full set of expected inputs.
+This implementation uses the [PRBMath Library](https://github.com/paulrberg/prb-math) for fixed point arithmetic, in order to implement the closed form solution to settling long-term trades. Efforts were made to make the computation numerically stable, but there's remaining work to be done here in order to ensure that the computation is correct for the full set of expected inputs.

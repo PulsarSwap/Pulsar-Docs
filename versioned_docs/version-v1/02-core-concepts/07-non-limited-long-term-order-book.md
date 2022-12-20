@@ -1,7 +1,7 @@
 ---
 id: non-limited-long-term-order-book
 title: Non-Limited LongTerm Order Book
-tags: non limited long term order book, documentation
+tags: non limited long-term order book, documentation
 ---
 
 In all the AMMs, we can only trade in one direction at one instance, but the TWAMM algorithm allows trading in both directions simultaneously.

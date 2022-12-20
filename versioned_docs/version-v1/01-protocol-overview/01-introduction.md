@@ -4,7 +4,7 @@ title: Introduction
 tags: introduction, documentation
 ---
 
-Paradigm Research Partners **Dave White**, **Dan Robinson** and Uniswap founder **Hayden Adams** have co-written an article proposing a new AMM model, the Time-Weighted Average Market Maker (TWAMM), for automating the execution swap of large trades on ethereum.
+Paradigm Research Partners **Dave White**, **Dan Robinson** and Uniswap founder **Hayden Adams** have co-written an article proposing a new AMM model, the `Time-Weighted Average Market Maker (TWAMM)`, for automating the execution swap of large trades on ethereum.
 
 For example, suppose Alice wants to buy $100 million worth of ETH on the blockchain, the best option is to manually split the order into parts and execute them over a few hours. If she sends several large sub-orders, each order will still have a significant impact on the price and be vulnerable to attacks. On the other hand, if she sends many small sub-orders, she will have to take all the risk of active trading and will pay high costs to miners in the form of gas fees per transaction.
 

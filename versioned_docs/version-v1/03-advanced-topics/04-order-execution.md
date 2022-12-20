@@ -6,7 +6,7 @@ tags: order execution, documentation
 
 <!-- [Reference Documentation](https://mirror.xyz/0slippage.eth/5zKJW4Zx9zYHpB4jNln16HuU8d8EtawmA17usNfIje4) -->
 
-Once an order expires, TWAMM executes a virtual long-term orders, which is not a real swap, but only a calculation of the accumulated swap rewards until the user cancels the long-term orders or the order expires in full, and then directly withdraws the corresponding tokens according to the accumulated swap rewards.
+Once an order expires, TWAMM executes a virtual long-term orders, which is not a real swap, but only a calculation of the accumulated swap proceeds until the user cancels the long-term orders or the order expires in full, and then directly withdraws the corresponding tokens according to the accumulated swap proceeds.
 
 Computing the result of the closed-form mathematical formula described in [Mathematical Principle of TWAMM](05-mathematical-principle-of-twamm.md) can alternately be described as performing a virtual order execution iteration, where each iteration occurs at a specific block height. Pulsar use [`Binary Search Tree (BST)`](../01-protocol-overview/02-smart-contracts.md#binarysearchtree) which is used to store and organize all the nodes that are long-term order expiration block heights.The block where each iteration occurs is controlled by the [OBI](03-order-block-interval.md) and when the order pool was deployed. Importantly, OBI will be shown to significantly reduce gas usage by reducing the number of iterations that the closed form mathematical formula need be computed for periods of inactivity during active Term Swaps.
 
