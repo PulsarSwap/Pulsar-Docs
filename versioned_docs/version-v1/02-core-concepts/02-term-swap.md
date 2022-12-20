@@ -4,7 +4,7 @@ title: Term Swap
 tags: term swap, documentation
 ---
 
-Traders can submit [LongTerm Orders](04-long-term-orders.md) to TWAMM to sell a fixed number of assets on a fixed number of blocks, and TWAMM breaks these longterm orders into an infinite number of infinitely small virtual sub-orders that trade with the embedded AMM at a uniform rate over time. Dealing with these virtual sub-orders individually would cost an infinite amount of gas, but the TWAMM closed-form mathematical formula allows their cumulative swap rewards to be calculated only when needed.
+Traders can submit [LongTerm Orders](04-long-term-orders.md) to TWAMM to sell a fixed number of assets on a fixed number of blocks, and TWAMM breaks these long-term orders into an infinite number of infinitely small virtual sub-orders that trade with the embedded AMM at a uniform rate over time. Dealing with these virtual sub-orders individually would cost an infinite amount of gas, but the TWAMM closed-form mathematical formula allows their cumulative swap proceeds to be calculated only when needed.
 
 ## LongTerm Swap Scenarios
 
