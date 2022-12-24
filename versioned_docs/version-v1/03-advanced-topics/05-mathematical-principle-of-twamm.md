@@ -112,7 +112,7 @@ $$\dfrac{y_{n}-\overline{a}}{y_{n}+\overline{a}}=(1-\dfrac{2b}{N+b})^{n}\cdot\df
 
 ## Limit Value
 
-The basic principle of **TWAMM** is to decompose long term large orders into infinitely many infinitely small virtual orders, i.e. $N$ can be taken to infinity, so the limit value of $x_{N}$ can be obtained.
+The basic principle of **TWAMM** is to decompose long-term large orders into infinitely many infinitely small virtual orders, i.e. $N$ can be taken to infinity, so the limit value of $x_{N}$ can be obtained.
 
 $$\dfrac{x_{ammEnd}-a}{x_{ammEnd}+a}=\lim_{N\rightarrow+\infty}(\dfrac{x_{N}-a}{x_{N}+a})=\lim_{N\rightarrow+\infty}(1-\dfrac{2b}{N+b})^{N}\cdot\dfrac{x_{0}-a}{x_{0}+a}=e^{-2b}\cdot\dfrac{x_{0}-a}{x_{0}+a}$$
 

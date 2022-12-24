@@ -8,7 +8,7 @@ The TWAMM smart contract manages all liquidity pools consisting of two ERC-20 to
 
 Anyone can become a liquidity provider (LP) of the liquidity pool by providing the equivalent value of each underlying token in exchange for the pool's liquidity tokens (LP Token). These tokens track a pro-rata share of LPs in the total reserve and can be redeemed at any time for the underlying assets.
 
-Again, due to the specific of TWAMM, the status of the term swap is updated each time a base token is provided or removed from the liquidity pool, which is used to calculate the swap rewards for longterm orders.
+Again, due to the specific of TWAMM, the status of the term swap is updated each time a base token is provided or removed from the liquidity pool, which is used to calculate the swap proceeds for long-term orders.
 
 ## LP Token
 
