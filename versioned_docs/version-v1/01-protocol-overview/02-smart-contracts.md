@@ -36,7 +36,7 @@ The factory holds the generic bytecode responsible for powering pairs. Its prima
 
 [`Pair.sol`](https://github.com/PulsarSwap/TWAMM-Contracts/blob/master/contracts/Pair.sol)
 
-The `Pair`, which uses the [BinarySearchTree](#binarysearchtree), [LongTermOrders](#longtermorders), [OrderPool](#orderpool) have two primary purposes: serving as time weighted average market makers of two ERC20 tokens and keeping track of pool token balances. They also expose data which can be used to execute [LongTerm Orders](../02-core-concepts/04-long-term-orders.md).
+The `Pair`, which uses the [BinarySearchTree](#binarysearchtree), [LongTermOrders](#longtermorders), [OrderPool](#orderpool) have two primary purposes: serving as time weighted average market makers of two ERC20 tokens and keeping track of pool token balances. They also expose data which can be used to execute [Long Term Orders](../02-core-concepts/04-long-term-orders.md).
 
 # TWAMM
 

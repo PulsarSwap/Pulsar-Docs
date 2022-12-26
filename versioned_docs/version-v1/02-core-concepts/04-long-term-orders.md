@@ -1,6 +1,6 @@
 ---
 id: long-term-orders
-title: LongTerm Orders
+title: Long Term Orders
 tags: long-term orders, documentation
 ---
 
