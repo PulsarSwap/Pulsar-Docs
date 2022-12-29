@@ -9,7 +9,7 @@ Pulsar TWAMM's embedded AMM provides instant swap of tokens, which follows the c
 
 TWAMM's `Instant Swap` is a simple way to trade one ERC-20 token for another. For end-users, swapping is intuitive: a user picks an input token and an output token. They specify an input amount, and the protocol calculates how much of the output token they’ll receive. They then execute the swap with one click, receiving the output token in their wallet immediately.
 
-But due to TWAMM's specificity, the status of the [Term Swap](02-term-swap.md) is updated each time the instant swap is performed, which is used to calculate the [order pool proceeds](05-order-pool.md) for [LongTerm Orders](04-long-term-orders.md).
+But due to TWAMM's specificity, the status of the [Term Swap](02-term-swap.md) is updated each time the instant swap is performed, which is used to calculate the [order pool proceeds](05-order-pool.md) for [Long Term Orders](04-long-term-orders.md).
 
 <!-- ---
 

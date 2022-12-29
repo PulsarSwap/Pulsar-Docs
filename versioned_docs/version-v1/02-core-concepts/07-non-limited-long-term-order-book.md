@@ -1,6 +1,6 @@
 ---
 id: non-limited-long-term-order-book
-title: Non-Limited LongTerm Order Book
+title: Non-Limited Long Term Order Book
 tags: non limited long-term order book, documentation
 ---
 
@@ -24,4 +24,4 @@ $$c=\dfrac{\sqrt{x_{ammStart}\cdot y_{in}}-\sqrt{y_{ammStart}\cdot x_{in}}}{\sqr
 
 $$e^{2\sqrt{\dfrac{x_{in}y_{in}}{k}}}>\left\lvert \dfrac{\sqrt{x_{ammStart}\cdot y_{in}}-\sqrt{y_{ammStart}\cdot x_{in}}}{\sqrt{x_{ammStart}\cdot y_{in}}+\sqrt{y_{ ammStart}\cdot x_{in}}}\right\rvert$$
 
-Therefore, any LongTerm Orders can be considered non-limited orders, TWAMM basically serves as an order book, which exchanges tokens between each side without providing liquidity. LongTerm orders are broken into infinitely small orders which are executed virtually between blocks. Due to this nature, it is less susceptible to sandwich attacks since the attacker has to put an order at the end of a block, and another order at the beginning of the following block.
+Therefore, any Long Term Orders can be considered non-limited orders, TWAMM basically serves as an order book, which exchanges tokens between each side without providing liquidity. Long Term Orders are broken into infinitely small orders which are executed virtually between blocks. Due to this nature, it is less susceptible to sandwich attacks since the attacker has to put an order at the end of a block, and another order at the beginning of the following block.

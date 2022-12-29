@@ -4,13 +4,13 @@ title: Term Swap
 tags: term swap, documentation
 ---
 
-Traders can submit [LongTerm Orders](04-long-term-orders.md) to TWAMM to sell a fixed number of assets on a fixed number of blocks, and TWAMM breaks these long-term orders into an infinite number of infinitely small virtual sub-orders that trade with the embedded AMM at a uniform rate over time. Dealing with these virtual sub-orders individually would cost an infinite amount of gas, but the TWAMM closed-form mathematical formula allows their cumulative swap proceeds to be calculated only when needed.
+Traders can submit [Long Term Orders](04-long-term-orders.md) to TWAMM to sell a fixed number of assets on a fixed number of blocks, and TWAMM breaks these long-term orders into an infinite number of infinitely small virtual sub-orders that trade with the embedded AMM at a uniform rate over time. Dealing with these virtual sub-orders individually would cost an infinite amount of gas, but the TWAMM closed-form mathematical formula allows their cumulative swap proceeds to be calculated only when needed.
 
-## LongTerm Swap Scenarios
+## Long Term Swap Scenarios
 
 [Reference Documentation](https://mirror.xyz/0slippage.eth/5zKJW4Zx9zYHpB4jNln16HuU8d8EtawmA17usNfIje4)
 
-Another important factor in TWAMM is the LongTerm Swap(LT-swap) scenario. Real world TWAMM use would include the situation where there are one or more active LT-Swap, offset, and also occurring in opposite directions.
+Another important factor in TWAMM is the Long Term Swap(LT-Swap) scenario. Real world TWAMM use would include the situation where there are one or more active LT-Swap, offset, and also occurring in opposite directions.
 
 Consider a TWAMM pool consisting of Token A and Token B. Direction in this case refers to a swap from Token A to Token B—the opposite direction would be from Token B to Token A. Figure below illustrates some of the important possible LT swap scenarios. (In below picture , Order Interval = 5 blocks)
 
