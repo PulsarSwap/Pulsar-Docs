@@ -12,7 +12,7 @@ The TWAMM algorithm transforms a long-term order over a period of time into an i
 
 TWAMM makes the price slippage for large orders smaller, by allowing counterparties to trade against those large orders simultaneously. In the most ideal case ($\dfrac{x_{in}}{y_{in}}=\dfrac{x_{ammStart}}{y_{ammStart}}$), zero slippage trading can be achieved. In this case, $x_{ammEnd}=x_{ammStart}$​, $y_{ammEnd}=y_{ammStart}$.
 
-$x_{ammEnd}=\sqrt{\dfrac{kx_{in}}{y_{in}}}\cdot\dfrac{e^{2\sqrt{\dfrac{x_{in}y_{in}}{k}}}+c}{e^{2\sqrt{\dfrac{x_{in}y_{in}}{k}}} -c}$$
+$$x_{ammEnd}=\sqrt{\dfrac{kx_{in}}{y_{in}}}\cdot\dfrac{e^{2\sqrt{\dfrac{x_{in}y_{in}}{k}}}+c}{e^{2\sqrt{\dfrac{x_{in}y_{in}}{k}}} -c}$$
 
 $$x_{out}=x_{ammStart}+x_{in}-x_{ammEnd}$$
 

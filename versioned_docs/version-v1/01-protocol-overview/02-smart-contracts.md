@@ -26,17 +26,9 @@ Together, these contracts enable the Pulsar Protocol to provide decentralized, a
 
 ## Address
 
-`Factory` is deployed at `0x408f66057163d829a30d4d466092c6b0eebb692f` on the Ethereum [mainnet](https://etherscan.io/address/0x408f66057163d829a30d4d466092c6b0eebb692f).
+`Factory` is deployed at `0x408f66057163d829a30d4d466092c6b0eebb692f` on the [Ethereum Mainnet](https://etherscan.io/address/0x408f66057163d829a30d4d466092c6b0eebb692f), and at `0x336a2f76d2be24e7cb6f468665a4277d4d617d00` on the [Arbitrum One](https://arbiscan.io/address/0x336a2f76d2be24e7cb6f468665a4277d4d617d00).
 
 The factory holds the generic bytecode responsible for powering pairs. Its primary job is to create one and only one smart contract per unique token pair. It also contains logic to turn on the protocol charge.
-
-# Pair
-
-## Code
-
-[`Pair.sol`](https://github.com/PulsarSwap/TWAMM-Contracts/blob/master/contracts/Pair.sol)
-
-The `Pair`, which uses the [BinarySearchTree](#binarysearchtree), [LongTermOrders](#longtermorders), [OrderPool](#orderpool) have two primary purposes: serving as time weighted average market makers of two ERC20 tokens and keeping track of pool token balances. They also expose data which can be used to execute [Long Term Orders](../02-core-concepts/04-long-term-orders.md).
 
 # TWAMM
 
@@ -46,9 +38,25 @@ The `Pair`, which uses the [BinarySearchTree](#binarysearchtree), [LongTermOrder
 
 ## Address
 
-`TWAMM` is deployed at `0xcd43aba971bef65555d877657f83093ddfb885b8` on the Ethereum [mainnet](https://etherscan.io/address/0xcd43aba971bef65555d877657f83093ddfb885b8).
+`TWAMM` is deployed at `0xcd43aba971bef65555d877657f83093ddfb885b8` on the [Ethereum Mainnet](https://etherscan.io/address/0xcd43aba971bef65555d877657f83093ddfb885b8), and at `0x04538b69f9a637500ecf2b705e05ab38bab27b7e` on the [Arbitrum One](https://arbiscan.io/address/0x04538b69f9a637500ecf2b705e05ab38bab27b7e).
 
 The `TWAMM`, which uses the [Library](#library) fully supports all the basic requirements of a user-friendly front-end offering Instant Swap, Term Swap and Liquidity Management functionality.
+
+# Address List
+
+| Platform         | Factory.sol                                  | TWAMM.sol                                    |
+| :--------------- | :------------------------------------------- | :------------------------------------------- |
+| Ethereum Mainnet | `0x408f66057163d829a30d4d466092c6b0eebb692f` | `0xcd43aba971bef65555d877657f83093ddfb885b8` |
+| Arbitrum One     | `0x336a2f76d2be24e7cb6f468665a4277d4d617d00` | `0x04538b69f9a637500ecf2b705e05ab38bab27b7e` |
+|                  |                                              |                                              |
+
+# Pair
+
+## Code
+
+[`Pair.sol`](https://github.com/PulsarSwap/TWAMM-Contracts/blob/master/contracts/Pair.sol)
+
+The `Pair`, which uses the [BinarySearchTree](#binarysearchtree), [LongTermOrders](#longtermorders), [OrderPool](#orderpool) have two primary purposes: serving as time weighted average market makers of two ERC20 tokens and keeping track of pool token balances. They also expose data which can be used to execute [Long Term Orders](../02-core-concepts/04-long-term-orders.md).
 
 ## Library
 
