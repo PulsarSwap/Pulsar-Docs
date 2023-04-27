@@ -7,7 +7,7 @@ slug: /
 
 Welcome to the Pulsar Protocol docs.
 
-The pages here contain conceptual and technical documentation of the Pulsar Protocol.If you are new to Pulsar, you might want to check out the [Protocol Overview](01-protocol-overview/01-introduction.md) first.
+These pages contain conceptual and technical documentation of the Pulsar Protocol, which includes the innovative Time-Weighted Average Market Maker (TWAMM). If you are new to Pulsar, it is recommended that you first check out the [Protocol Overview](01-protocol-overview/01-introduction.md).
 
 `Time-Weighted Average Market Maker (TWAMM)` is a new on-chain automated market making model designed by
 Paradigm Research Partners [Dave White](https://twitter.com/_Dave__White_), [Dan Robinson](https://twitter.com/danrobinson) and Uniswap founder [Hayden Adams](https://twitter.com/haydenzadams). TWAMM allows market participants to efficiently execute large orders on multiple blocks of Ethereum and works by breaking long-term large orders down into an infinite number of infinitely small virtual orders, and executing transactions smoothly over time using an embedded AMM.

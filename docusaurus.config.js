@@ -4,7 +4,7 @@ const katex = require("rehype-katex");
 module.exports = {
   title: "Pulsar Protocol",
   tagline: "Documentation and Guides",
-  url: "https://docs.pulsarswap.com/",
+  url: "https://docs.pulsarswap.com",
   baseUrl: "/",
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "ignore",
@@ -65,15 +65,15 @@ module.exports = {
           items: [
             {
               label: "Home",
-              href: "https://pulsarswap.com/",
+              href: "https://pulsarswap.com",
             },
             {
               label: "Dapp",
-              href: "https://dapp.pulsarswap.com/",
+              href: "https://dapp.pulsarswap.com",
             },
             {
               label: "Analytics",
-              href: "https://info.pulsarswap.com/",
+              href: "https://info.pulsarswap.com",
             },
           ],
         },
@@ -103,7 +103,7 @@ module.exports = {
             },
             {
               label: "Blog",
-              href: "https://mirror.xyz/pulsarswap.eth/",
+              href: "https://mirror.xyz/pulsarswap.eth",
             },
           ],
         },
@@ -122,7 +122,7 @@ module.exports = {
           rehypePlugins: [katex],
           sidebarPath: require.resolve("./v1sidebars.js"),
           includeCurrentVersion: false,
-          editUrl: "https://github.com/PulsarSwap/pulsar-docs/tree/main/",
+          editUrl: "https://github.com/PulsarSwap/pulsar-docs/tree/main",
         },
 
         theme: {

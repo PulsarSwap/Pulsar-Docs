@@ -1,6 +1,6 @@
 {
   "index_name": "pulsar-docs",
-  "start_urls": ["https://docs.pulsarswap.com/"],
+  "start_urls": ["https://docs.pulsarswap.com"],
   "sitemap_urls": ["https://docs.pulsarswap.com/sitemap.xml"],
   "sitemap_alternate_links": true,
   "stop_urls": [],
