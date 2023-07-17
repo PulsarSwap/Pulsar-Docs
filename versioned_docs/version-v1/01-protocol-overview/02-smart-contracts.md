@@ -26,7 +26,7 @@ Together, these contracts enable the Pulsar Protocol to provide decentralized, a
 
 ## Address
 
-`Factory` is deployed at `0x408f66057163d829a30d4d466092c6b0eebb692f` on the [Ethereum Mainnet](https://etherscan.io/address/0x408f66057163d829a30d4d466092c6b0eebb692f), and at `0x336a2f76d2be24e7cb6f468665a4277d4d617d00` on the [Arbitrum One](https://arbiscan.io/address/0x336a2f76d2be24e7cb6f468665a4277d4d617d00).
+`Factory` is deployed at `0x408f66057163d829a30d4d466092c6b0eebb692f` on the [Ethereum Mainnet](https://etherscan.io/address/0x408f66057163d829a30d4d466092c6b0eebb692f), at `0xB5B03706C24c79D3F7a368b30562a1711d74F688` on the [Mantle](https://explorer.mantle.xyz/address/0xB5B03706C24c79D3F7a368b30562a1711d74F688), and at `0x336a2f76d2be24e7cb6f468665a4277d4d617d00` on the [Arbitrum One](https://arbiscan.io/address/0x336a2f76d2be24e7cb6f468665a4277d4d617d00).
 
 The factory holds the generic bytecode responsible for powering pairs. Its primary job is to create one and only one smart contract per unique token pair. It also contains logic to turn on the protocol charge.
 
@@ -38,7 +38,7 @@ The factory holds the generic bytecode responsible for powering pairs. Its prima
 
 ## Address
 
-`TWAMM` is deployed at `0xcd43aba971bef65555d877657f83093ddfb885b8` on the [Ethereum Mainnet](https://etherscan.io/address/0xcd43aba971bef65555d877657f83093ddfb885b8), and at `0x04538b69f9a637500ecf2b705e05ab38bab27b7e` on the [Arbitrum One](https://arbiscan.io/address/0x04538b69f9a637500ecf2b705e05ab38bab27b7e).
+`TWAMM` is deployed at `0xcd43aba971bef65555d877657f83093ddfb885b8` on the [Ethereum Mainnet](https://etherscan.io/address/0xcd43aba971bef65555d877657f83093ddfb885b8), at `0x8E76C60461eBd76fE54960F50f436ccF24F0D9a6` on the [Mantle](https://explorer.mantle.xyz/address/0x8E76C60461eBd76fE54960F50f436ccF24F0D9a6), and at `0x04538b69f9a637500ecf2b705e05ab38bab27b7e` on the [Arbitrum One](https://arbiscan.io/address/0x04538b69f9a637500ecf2b705e05ab38bab27b7e).
 
 The `TWAMM`, which uses the [Library](#library) fully supports all the basic requirements of a user-friendly front-end offering Instant Swap, Term Swap and Liquidity Management functionality.
 
@@ -47,6 +47,7 @@ The `TWAMM`, which uses the [Library](#library) fully supports all the basic req
 | Platform         | Factory.sol                                  | TWAMM.sol                                    |
 | :--------------- | :------------------------------------------- | :------------------------------------------- |
 | Ethereum Mainnet | `0x408f66057163d829a30d4d466092c6b0eebb692f` | `0xcd43aba971bef65555d877657f83093ddfb885b8` |
+| Mantle           | `0xB5B03706C24c79D3F7a368b30562a1711d74F688` | `0x8E76C60461eBd76fE54960F50f436ccF24F0D9a6` |
 | Arbitrum One     | `0x336a2f76d2be24e7cb6f468665a4277d4d617d00` | `0x04538b69f9a637500ecf2b705e05ab38bab27b7e` |
 |                  |                                              |                                              |
 
