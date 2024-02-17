@@ -68,8 +68,8 @@ module.exports = {
               href: "https://pulsarswap.com",
             },
             {
-              label: "Dapp",
-              href: "https://dapp.pulsarswap.com",
+              label: "App",
+              href: "https://app.pulsarswap.com",
             },
             {
               label: "Analytics",

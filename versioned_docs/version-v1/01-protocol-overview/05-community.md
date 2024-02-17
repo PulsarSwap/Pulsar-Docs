@@ -7,7 +7,7 @@ tags: community, documentation
 | Platform      | Link                                     |
 | :------------ | :--------------------------------------- |
 | Website       | <https://pulsarswap.com>                 |
-| Interface     | <https://dapp.pulsarswap.com>            |
+| Interface     | <https://app.pulsarswap.com>            |
 | GitHub        | <https://github.com/PulsarSwap>          |
 | WhitePaper    | <https://www.paradigm.xyz/2021/07/twamm> |
 | Documentation | <https://docs.pulsarswap.com>            |
